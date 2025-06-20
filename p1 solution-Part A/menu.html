@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Menu</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    h1 {
+      color: red;
+      margin-bottom: 30px;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .menu-item {
+      border: 2px solid #333;
+      padding: 20px;
+      background-color: skyblue ;
+      flex: 1 1 30%;
+      min-width: 250px;
+      max-width: 300px;
+      box-sizing: border-box;
+      position: relative;
+      text-align: left;
+    }
+
+    .menu-item .title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-left: 2px solid #333;
+      border-bottom: 2px solid #333;
+    }
+
+    /* Colored title backgrounds */
+    .menu-item.chicken .title {
+      background-color: pink;
+    }
+
+    .menu-item.beef .title {
+      background-color: red;
+      color: white;
+    }
+
+    .menu-item.sushi .title {
+      background-color: yellow;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 991px) {
+      .menu-item {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .menu-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Menu</h1>
+  <div class="menu-container">
+    <section class="menu-item chicken">
+      <div class="title">Chicken</div>
+      <p>Our chicken dishes are juicy and flavorful, cooked with a blend of herbs and spices. 
+        From grilled to fried options, we use high-quality poultry to ensure great taste every time.</p>
+    </section>
+
+    <section class="menu-item beef">
+      <div class="title">Beef</div>
+      <p>We offer premium beef meals, including steak, stir-fry, and slow-cooked dishes.
+         Rich in flavor and perfectly seasoned, our beef is always tender and satisfying.</p>
+    </section>
+
+    <section class="menu-item sushi">
+      <div class="title">Sushi</div>
+      <p>Enjoy fresh, handcrafted sushi rolls made with vinegared rice, fresh fish, and crisp vegetables.
+         We offer both traditional and fusion-style options to please every palate.</p>
+    </section>
+  </div>
+</body>
+</html>
